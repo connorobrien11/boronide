@@ -1,0 +1,11 @@
+local banana
+banana = hookmetamethod(game, "__namecall", function(self, ...)
+local method = getnamecallmethod()
+local args = {...}
+
+if not checkcaller() and self.Name == "moddelteasdasd123" and  method == "FireServer" then
+    return 
+end
+
+return banana(self, ...)
+end)
